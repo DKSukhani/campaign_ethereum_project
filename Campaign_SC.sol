@@ -117,7 +117,7 @@ contract Campaign {
         Request storage localRequestVaraible = requests[index];
         require(!localRequestVaraible.complete);
         require(localRequestVaraible.approvalCount >= (totalNumberofContributers/2) + 1);
-        localRequestVaraible.recipient.transfer(localRequestVaraible.value)
+        localRequestVaraible.recipient.transfer(localRequestVaraible.value);
 
         
         localRequestVaraible.complete = true;
